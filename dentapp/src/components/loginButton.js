@@ -1,4 +1,5 @@
 import React from "react";
+import "./loginButton.css";
 
 function LoginButton() {
   const handleClick = () => {
@@ -7,7 +8,9 @@ function LoginButton() {
 
   return (
     <>
-      <button onClick={handleClick}>Click here</button>
+      <button onClick={handleClick} className="login_button">
+        Enviar
+      </button>
     </>
   );
 }
