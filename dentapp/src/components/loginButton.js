@@ -1,5 +1,5 @@
 import React from "react";
-import "./loginButton.css";
+import Button from "react-bootstrap/Button";
 
 function LoginButton() {
   const handleClick = () => {
@@ -8,9 +8,28 @@ function LoginButton() {
 
   return (
     <>
-      <button onClick={handleClick} className="login_button">
+      <style type="text/css">
+        {`
+    .btn-main {
+      background-color: #00d9cc;
+      color: #ffff;
+      border: none;
+      border-radius: 25px;
+      font-family: Roboto;
+      letter-spacing: 0.0357143em;
+      text-transform: uppercase;
+    }
+
+    .btn-size {
+      width: 311px;
+      height: 53px;
+    }
+    `}
+      </style>
+
+      <Button variant="main" size="size" onClick={handleClick}>
         Enviar
-      </button>
+      </Button>
     </>
   );
 }
