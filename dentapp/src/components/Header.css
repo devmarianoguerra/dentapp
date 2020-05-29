@@ -1,0 +1,13 @@
+.bgColor-Light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.bgColor-Dark {
+    background-color: #00D9CC;
+    color: #ffffff;
+}
+
+.Navbar{
+    flex-wrap: wrap !important;
+}
