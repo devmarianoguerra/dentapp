@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { LinkContainer } from 'react-router-bootstrap'
-import { ReactComponent as BackButton } from "../assets/svg/BackButton.svg"
+import { ReactComponent as BackButton } from "../assets/BackButton.svg"
 
 
 import Navbar from 'react-bootstrap/Navbar'
