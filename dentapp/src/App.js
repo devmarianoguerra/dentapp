@@ -13,7 +13,7 @@ function App() {
       {/* backgroundColor="#00D9CC" color="#ffffff" color verde/blanco*/}
       {/* backgroundColor="#ffffff" color="#000000" color blanco/negro*/}
 
-      <Header backgroundColor="#ffffff" color="#000000" handleButtonPress='/About'>
+      <Header backgroundColor="#00D9CC" color="#ffffff" handleButtonPress='/About'>
         {/* Esto es el props.children */}
         <div>Insertar hijo aqui </div>
         {/* Fin del props.children */}
