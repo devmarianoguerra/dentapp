@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Container from 'react-bootstrap/Container'
-
 import LogoDentappBlanco from '../assets/LogoDentappBlanco.svg'
 
 class LoginLogo extends Component {
@@ -11,7 +10,7 @@ class LoginLogo extends Component {
 
         return (
             <Container fluid>
-                <LogoDentappBlanco/>
+                <img src={LogoDentappBlanco} alt="logo" />
             </Container>
         );
     }
