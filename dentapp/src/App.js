@@ -1,10 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/js/dist/index.js';
 
 import Header from './components/Header'
 import LoginLogo from './components/LoginLogo';
+import LoadingSpinner from './components/LoadingSpinner';
 
 
 function App(props) {
@@ -18,6 +20,7 @@ function App(props) {
       <Switch>
         <Route path="/">
           <div>Registro</div>
+          <LoadingSpinner handleShow={true}/>
         </Route>
       </Switch>
 
