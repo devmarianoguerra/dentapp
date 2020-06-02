@@ -3,11 +3,9 @@ import { LinkContainer } from 'react-router-bootstrap'
 import { ReactComponent as BackButton } from "../assets/BackButton.svg"
 import styled from 'styled-components'
 
-
 import Navbar from 'react-bootstrap/Navbar'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
-
 
 
 const HeadStyled = styled.div.attrs(props => ({
