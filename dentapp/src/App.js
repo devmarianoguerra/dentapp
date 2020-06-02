@@ -5,15 +5,15 @@ import Header from './components/Header'
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import './App.css';
 
-function App() {
-
+function App(props) {
+ 
   return (
     <BrowserRouter>
-
+     
       {/* backgroundColor="#00D9CC" color="#ffffff" color verde/blanco*/}
       {/* backgroundColor="#ffffff" color="#000000" color blanco/negro*/}
 
-      <Header backgroundColor="#00D9CC" color="#ffffff" handleButtonPress='/About'>
+      <Header backgroundColor="#00D9CC" color="#ffffff" handleButtonPress="/">
         {/* Esto es el props.children */}
         <div>Insertar hijo aqui </div>
         {/* Fin del props.children */}

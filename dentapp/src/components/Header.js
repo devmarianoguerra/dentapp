@@ -29,6 +29,7 @@ class Header extends Component {
     state = {}
 
     render() {
+        
         return (
             <HeadStyled backgroundColor={this.props.backgroundColor} color={this.props.color}>
 
@@ -40,7 +41,7 @@ class Header extends Component {
                         </LinkContainer>
                     </Container>
 
-                    <Container>
+                    <Container fluid>
                         {this.props.children}
                     </Container>
                 </Navbar>
