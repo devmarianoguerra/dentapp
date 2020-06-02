@@ -1,35 +1,27 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
+import Styled from "styled-components";
 
 function LoginButton() {
   const handleClick = () => {
     console.log("The button was clicked");
   };
 
+  const Loginbutton = Styled.button`
+  background-color: #DBF8FA;
+  color:  #00ADC1;
+  border: none;
+  border-radius: 60px;
+  font-family: Roboto;
+  letter-spacing: 0.0357143em;
+  text-transform: uppercase;
+  width: 311px;
+  height: 53px;
+  `;
+
   return (
     <>
-      <style type="text/css">
-        {`
-    .btn-main {
-      background-color: #00d9cc;
-      color: #ffff;
-      border: none;
-      border-radius: 25px;
-      font-family: Roboto;
-      letter-spacing: 0.0357143em;
-      text-transform: uppercase;
-    }
-
-    .btn-size {
-      width: 311px;
-      height: 53px;
-    }
-    `}
-      </style>
-
-      <Button variant="main" size="size" onClick={handleClick}>
-        Enviar
-      </Button>
+      <Loginbutton onClick={handleClick}>Accesar</Loginbutton>
     </>
   );
 }
