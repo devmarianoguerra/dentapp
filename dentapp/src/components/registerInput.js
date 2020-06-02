@@ -1,7 +1,7 @@
 import React from "react";
 import { InputGroup, FormControl } from "react-bootstrap";
 
-class LoginInput extends React.Component {
+class RegisterInput extends React.Component {
   state = {
     input: "",
   };
@@ -21,8 +21,8 @@ class LoginInput extends React.Component {
                 width: 311,
                 height: 53,
                 fontSize: 18,
-                color: "red",
-                borderColor: "#FFFFFF",
+                color: "#929292",
+                borderColor: "#00D9CC",
                 borderWidth: 1.5,
                 borderRadius: 60,
                 fontFamily: "Roboto",
@@ -37,4 +37,4 @@ class LoginInput extends React.Component {
   }
 }
 
-export default LoginInput;
+export default RegisterInput;
