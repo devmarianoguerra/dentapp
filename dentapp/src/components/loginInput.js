@@ -1,5 +1,6 @@
 import React from "react";
 import { InputGroup, FormControl } from "react-bootstrap";
+import Styled from "styled-components";
 
 class LoginInput extends React.Component {
   state = {
@@ -11,27 +12,28 @@ class LoginInput extends React.Component {
     console.log("input value: ", e.target.value);
   };
 
+  LoginInputStyle = Styled.input`
+      width: 311,
+      height: 53,
+      fontSize: 18,
+      color: "red",
+      borderColor: "red",
+      borderWidth: 1.5,
+      borderRadius: 60,
+      fontFamily: "Roboto",
+  `;
+
   render() {
     return (
       <>
-        <InputGroup className="inputGroupStyle">
+        <LoginInputStyle>
           <div>
             <FormControl
-              style={{
-                width: 311,
-                height: 53,
-                fontSize: 18,
-                color: "red",
-                borderColor: "#FFFFFF",
-                borderWidth: 1.5,
-                borderRadius: 60,
-                fontFamily: "Roboto",
-              }}
               placeholder="contact@email.com"
               onChange={this.handleChange}
             />
           </div>
-        </InputGroup>
+        </LoginInputStyle>
       </>
     );
   }

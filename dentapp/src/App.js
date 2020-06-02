@@ -8,7 +8,6 @@ function App() {
   return (
     <>
       <LoginInput />
-      <RegisterInput />
     </>
   );
 }
