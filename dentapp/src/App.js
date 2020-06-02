@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 // import logo from './logo.svg';
 import Header from './components/Header'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import LoginLogo from './components/LoginLogo';
 // import './App.css';
 
 function App(props) {
@@ -15,7 +16,7 @@ function App(props) {
 
       <Header backgroundColor="#00D9CC" color="#ffffff" handleButtonPress="/">
         {/* Esto es el props.children */}
-        <div>Insertar hijo aqui </div>
+       <LoginLogo/>
         {/* Fin del props.children */}
       </Header>
 
@@ -29,6 +30,7 @@ function App(props) {
         </Route>
         <Route path="/">
           <div>Home</div>
+          
         </Route>
       </Switch>
 
