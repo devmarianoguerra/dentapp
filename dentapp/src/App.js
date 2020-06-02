@@ -10,10 +10,12 @@ function App() {
   return (
     <BrowserRouter>
 
-      {/* backgroundColor= Dark o Light */}
-      <Header backgroundColor="Light" handleButtonPress='/About'>
+      {/* backgroundColor="#00D9CC" color="#ffffff" color verde/blanco*/}
+      {/* backgroundColor="#ffffff" color="#000000" color blanco/negro*/}
+
+      <Header backgroundColor="#00D9CC" color="#ffffff" handleButtonPress='/About'>
         {/* Esto es el props.children */}
-        <div>Prueba del subMenu </div>
+        <div>Insertar hijo aqui </div>
         {/* Fin del props.children */}
       </Header>
 
