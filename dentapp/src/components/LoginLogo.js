@@ -1,19 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Container from 'react-bootstrap/Container'
-import LogoDentappBlanco from '../assets/LogoDentappBlanco.svg'
+import Container from "react-bootstrap/Container";
+import LogoDentappBlanco from "../assets/LogoDentappBlanco.svg";
 
 class LoginLogo extends Component {
-    state = {}
+  state = {};
 
-    render() {
-
-        return (
-            <Container fluid>
-                <img src={LogoDentappBlanco} alt="logo" />
-            </Container>
-        );
-    }
+  render() {
+    return (
+      <Container fluid>
+        <img src={LogoDentappBlanco} alt="logo" />
+      </Container>
+    );
+  }
 }
 
 export default LoginLogo;

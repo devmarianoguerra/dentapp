@@ -1,24 +1,28 @@
-import React, { Component } from 'react';
-
-// import Container from 'react-bootstrap/Container'
-import Spinner from 'react-bootstrap/Spinner'
+import React, { Component } from "react";
+import Spinner from "react-bootstrap/Spinner";
+import PropTypes from "prop-types";
 
 class LoadingSpinner extends Component {
-    state = {
-        isLoading: this.props.handleShow
-    }
+  state = {
+    isLoading: this.props.handleShows,
+  };
 
-    render() {
-
-        return (
-            <>
-                {this.state.isLoading && <Spinner animation="border" role="status">
-                    <span className="sr-only">Loading...</span>
-                </Spinner>}
-                
-            </>
-        );
-    }
+  render() {
+    const { isLoading } = this.state;
+    return (
+      <>
+        {isLoading && (
+          <Spinner animation="border" role="status">
+            <span className="sr-only">Cargando...</span>
+          </Spinner>
+        )}
+      </>
+    );
+  }
 }
+
+LoadingSpinner.propTypes = {
+  handleShows: PropTypes.bool,
+};
 
 export default LoadingSpinner;
