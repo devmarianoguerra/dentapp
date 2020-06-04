@@ -1,18 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 
 import Container from "react-bootstrap/Container";
 import LogoDentappBlanco from "../assets/LogoDentappBlanco.svg";
 
-class LoginLogo extends Component {
-  state = {};
+export default function LoginLogo(props) {
 
-  render() {
     return (
       <Container fluid>
         <img src={LogoDentappBlanco} alt="logo" />
       </Container>
     );
   }
-}
 
-export default LoginLogo;

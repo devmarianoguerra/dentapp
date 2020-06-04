@@ -24,7 +24,7 @@ function App(props) {
       <Switch>
         <Route path="/">
           <div>Registro</div>
-          <LoadingSpinner handleShows />
+          <LoadingSpinner show />
         </Route>
       </Switch>
     </BrowserRouter>

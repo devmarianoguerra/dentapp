@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 class LoadingSpinner extends Component {
   state = {
-    isLoading: this.props.handleShows,
+    isLoading: this.props.show,
   };
 
   render() {

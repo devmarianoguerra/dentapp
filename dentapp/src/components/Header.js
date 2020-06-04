@@ -16,24 +16,19 @@ function createBackButton(color) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path
+    <path
         d="M8.7525 1.90245L7.425 0.574951L0 7.99995L7.425 15.425L8.7525 14.0975L2.655 7.99995L8.7525 1.90245Z"
         fill={color}
-      />
+    />
     </svg>
   );
 }
 
-const HeadStyled = styled.div.attrs((props) => ({
-  backgroundColor: props.backgroundColor,
-  iconAndTitleColor: props.iconAndTitleColor,
-}))`
+const HeadStyled = styled.div`
   background-color: ${(props) => props.backgroundColor};
-  color: ${(props) => props.iconAndTitleColor} !important;
-  .Navbar {
-    flex-wrap: wrap !important;
-  }
+  color: ${(props) => props.iconAndTitleColor};
 `;
+
 
 class Header extends Component {
   state = {};
@@ -47,7 +42,7 @@ class Header extends Component {
     } = this.props;
     return (
       <HeadStyled backgroundColor={backgroundColor} color={iconAndTitleColor}>
-        <Navbar className={`Navbar`}>
+        <Navbar expand className="flex-wrap">
           <Container fluid>
             <LinkContainer to={routeToNavigate}>
               <Button variant="link">
