@@ -5,7 +5,7 @@ import { InputGroup } from "react-bootstrap";
 const Form = Styled.input`
 width: 311px;
 height: 53px;
-border: 1.5px solid #00D9CC;
+border: ${(props) => (props.primary ? "#FFFFFF" : "1.5px solid #00D9CC")};
 border-radius: 60px;
 text-align: left;
 padding-left: 25px;
@@ -24,7 +24,7 @@ font-style: normal;
 font-weight: bold;
 font-size: 12px;
 line-height: 12px;
-color: #4A4A4A;
+color: ${(props) => (props.primary ? "#FFFFFF" : "#4A4A4A")};
 `;
 
 class LoginInput extends React.Component {
@@ -40,12 +40,16 @@ class LoginInput extends React.Component {
   render() {
     return (
       <>
-        <InputLabel htmlFor=""> Mail </InputLabel>
+        <InputLabel primary> Mail </InputLabel>
         <InputGroup>
-          <Form placeholder="contact@email.com" onChange={this.handleChange} />
+          <Form
+            primary
+            placeholder="contact@email.com"
+            onChange={this.handleChange}
+          />
         </InputGroup>
 
-        <InputLabel htmlFor=""> Mail </InputLabel>
+        <InputLabel> Mail </InputLabel>
         <InputGroup>
           <Form placeholder="contact@email.com" onChange={this.handleChange} />
         </InputGroup>
