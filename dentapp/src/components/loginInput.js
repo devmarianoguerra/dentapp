@@ -1,6 +1,31 @@
 import React from "react";
-import { InputGroup, FormControl } from "react-bootstrap";
 import Styled from "styled-components";
+import { InputGroup } from "react-bootstrap";
+
+const Form = Styled.input`
+width: 311px;
+height: 53px;
+border: 1.5px solid #00D9CC;
+border-radius: 60px;
+text-align: left;
+padding-left: 25px;
+font-size: 18px;
+line-height: 12px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+color: #929292;
+`;
+
+const InputLabel = Styled.label`
+margin-left: 25px;
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 12px;
+color: #4A4A4A;
+`;
 
 class LoginInput extends React.Component {
   state = {
@@ -12,28 +37,18 @@ class LoginInput extends React.Component {
     console.log("input value: ", e.target.value);
   };
 
-  LoginInputStyle = Styled.input`
-      width: 311,
-      height: 53,
-      fontSize: 18,
-      color: "red",
-      borderColor: "red",
-      borderWidth: 1.5,
-      borderRadius: 60,
-      fontFamily: "Roboto",
-  `;
-
   render() {
     return (
       <>
-        <LoginInputStyle>
-          <div>
-            <FormControl
-              placeholder="contact@email.com"
-              onChange={this.handleChange}
-            />
-          </div>
-        </LoginInputStyle>
+        <InputLabel htmlFor=""> Mail </InputLabel>
+        <InputGroup>
+          <Form placeholder="contact@email.com" onChange={this.handleChange} />
+        </InputGroup>
+
+        <InputLabel htmlFor=""> Mail </InputLabel>
+        <InputGroup>
+          <Form placeholder="contact@email.com" onChange={this.handleChange} />
+        </InputGroup>
       </>
     );
   }
