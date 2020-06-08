@@ -30,6 +30,7 @@ color: ${(props) => (props.primary ? "#FFFFFF" : "#4A4A4A")};
 class LoginInput extends React.Component {
   state = {
     input: "",
+    placeholder: "contact@email.com",
   };
 
   handleChange = (e) => {
@@ -44,14 +45,17 @@ class LoginInput extends React.Component {
         <InputGroup>
           <Form
             primary
-            placeholder="contact@email.com"
+            placeholder={"contact@email.com"}
             onChange={this.handleChange}
           />
         </InputGroup>
 
         <InputLabel> Mail </InputLabel>
         <InputGroup>
-          <Form placeholder="contact@email.com" onChange={this.handleChange} />
+          <Form
+            placeholder={this.state.placeholder}
+            onChange={this.handleChange}
+          />
         </InputGroup>
       </>
     );
