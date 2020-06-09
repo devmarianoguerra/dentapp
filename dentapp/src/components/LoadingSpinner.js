@@ -22,7 +22,7 @@ class LoadingSpinner extends Component {
 }
 
 LoadingSpinner.propTypes = {
-  handleShows: PropTypes.bool,
+  show: PropTypes.bool,
 };
 
 export default LoadingSpinner;
