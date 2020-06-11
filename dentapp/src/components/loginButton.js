@@ -9,11 +9,11 @@ const cyan = "#00d9cc";
 const primaryFont = "Roboto";
 
 const Button = Styled.button`
-background-color: ${(props) => (props.primary ? cyan : mint)};
-color: ${(props) => (props.primary ? white : cerulean)};
+background-color: ${(props) => (props.theme ? cyan : mint)};
+color: ${(props) => (props.theme ? white : cerulean)};
 border: none;
 border-radius: 60px;
-font-family: ${(props) => (props.primary ? primaryFont : primaryFont)};
+font-family: ${(props) => (props.theme ? primaryFont : primaryFont)};
 letter-spacing: 0.0357143em;
 text-transform: uppercase;
 width: 311px;
@@ -23,8 +23,8 @@ height: 53px;
 function LoginButton() {
   return (
     <>
-      <Button primary onClick={props.handleClick}>
-        {props.action}
+      <Button theme onClick={props.handleClick}>
+        {props.actionText}
       </Button>
     </>
   );
@@ -35,7 +35,10 @@ export default LoginButton;
 Button.PropTypes = {
   onClick: PropTypes.function.isRequired,
   action: PropTypes.string.isRequired,
-  theme: PropTypes.string,
+  theme: PropTypes.color({
+    primary: PropTypes.string.isRequired,
+    secondary: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 Button.defaultProps = {
