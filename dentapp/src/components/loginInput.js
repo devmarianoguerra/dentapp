@@ -1,11 +1,16 @@
 import React from "react";
 import Styled from "styled-components";
 import { InputGroup } from "react-bootstrap";
+import PropTypes from "prop-types";
+
+const white = "#FFFFFF";
+const cyan = "#00D9CC";
+const darkgrey = "#4A4A4A";
 
 const Form = Styled.input`
 width: 311px;
 height: 53px;
-border: ${(props) => (props.primary ? "#FFFFFF" : "1.5px solid #00D9CC")};
+border: ${(props) => (props.theme ? white : `1.5px solid ${cyan}`)};
 border-radius: 60px;
 text-align: left;
 padding-left: 25px;
@@ -24,38 +29,20 @@ font-style: normal;
 font-weight: bold;
 font-size: 12px;
 line-height: 12px;
-color: ${(props) => (props.primary ? "#FFFFFF" : "#4A4A4A")};
+color: ${(props) => (props.theme ? white : darkgrey)};
 `;
 
 class LoginInput extends React.Component {
   state = {
     input: "",
-    placeholder: "contact@email.com",
-  };
-
-  handleChange = (e) => {
-    this.setState({ input: e.target.value });
-    console.log("input value: ", e.target.value);
   };
 
   render() {
     return (
       <>
-        <InputLabel primary> Mail </InputLabel>
+        <InputLabel> {props.label} </InputLabel>
         <InputGroup>
-          <Form
-            primary
-            placeholder={"contact@email.com"}
-            onChange={this.handleChange}
-          />
-        </InputGroup>
-
-        <InputLabel> Mail </InputLabel>
-        <InputGroup>
-          <Form
-            placeholder={this.state.placeholder}
-            onChange={this.handleChange}
-          />
+          <Form placeholder={props.actionText} onChange={props.handleChange} />
         </InputGroup>
       </>
     );
@@ -63,3 +50,17 @@ class LoginInput extends React.Component {
 }
 
 export default LoginInput;
+
+Form.PropTypes = {
+  theme: PropTypes.border({
+    primary: PropTypes.string.isRequired,
+    secondary: PropTypes.string.isRequired,
+  }),
+};
+
+InputLabel.PropTypes = {
+  theme: PropTypes.color({
+    primary: PropTypes.string.isRequired,
+    secondary: PropTypes.string.isRequired,
+  }),
+};
