@@ -51,16 +51,15 @@ class LoginInput extends React.Component {
 
 export default LoginInput;
 
-Form.PropTypes = {
+LoginInput.PropTypes = {
   theme: PropTypes.border({
     primary: PropTypes.string.isRequired,
     secondary: PropTypes.string.isRequired,
   }),
-};
-
-InputLabel.PropTypes = {
   theme: PropTypes.color({
     primary: PropTypes.string.isRequired,
     secondary: PropTypes.string.isRequired,
   }),
+  actionText: PropTypes.string.isRequired,
+  handleChange: PropTypes.function.isRequired,
 };
