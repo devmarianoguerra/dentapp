@@ -15,15 +15,15 @@ function CallToActionText() {
   letter-spacing: 0.02em;
   text-decoration-line: none;
   text-transform: uppercase;
-  color: ${(props) => (props.color.primary ? "black" : "red")}
+  color: ${(props) => (props.theme ? "black" : "red")}
 
-  &:hover ${ActionText}{
+  &:hover{
     text-decoration-line: underline;
   }
   `;
   return (
     <>
-      <ActionText onClick={props.handleClick}>{props.text}</ActionText>
+      <ActionText onClick={props.handleClick}>{props.callToAction}</ActionText>
     </>
   );
 }
@@ -31,8 +31,11 @@ function CallToActionText() {
 export default CallToActionText;
 
 CallToActionText.propTypes = {
-  color: PropTypes.string.isRequired,
+  theme: PropTypes.color({
+    primary: PropTypes.string.isRequired,
+    warning: PropTypes.string.isRequired,
+  }),
   underline: PropTypes.string,
-  text: PropTypes.string.isRequired,
+  callToAction: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired,
 };
