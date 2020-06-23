@@ -34,10 +34,10 @@ class Category extends Component {
     state = {};
 
     render() {
-        const { bgColor, title, icon } = this.props;
+        const { bgColor, title, icon, onClick } = this.props;
         return (
             <>
-                <div className="text-center" style={{width: "102px", height:"130px"}}>
+                <div onClick={onClick()} className="text-center" style={{width: "102px", height:"130px"}}>
                     {HexaCircle(bgColor)}
                     <AlignCenter>
                         <img className="" src={icon} alt="Title" />
@@ -52,6 +52,7 @@ Category.propTypes = {
     bgColor: PropTypes.string,
     title: PropTypes.string,
     icon: PropTypes.object,
+    onClick: PropTypes.object,
 };
 
 export default Category;
