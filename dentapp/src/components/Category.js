@@ -49,7 +49,9 @@ class Category extends Component {
 }
 
 Category.propTypes = {
-    bgColor: PropTypes.bool,
+    bgColor: PropTypes.string,
+    title: PropTypes.string,
+    icon: PropTypes.object,
 };
 
 export default Category;
