@@ -5,8 +5,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/js/dist/index.js";
 
 import Header from "./components/Header";
-import LoginLogo from "./components/LoginLogo";
-import LoadingSpinner from "./components/LoadingSpinner";
+import DesechablesIcon from './assets/DesechablesIcon.svg'
+
+import Category from "./components/Category";
 
 function App(props) {
   const primaryColor = "#00D9CC";
@@ -18,13 +19,15 @@ function App(props) {
         iconAndTitleColor={secundaryColor}
         routeToNavigate="/"
       >
-        <LoginLogo />
+        {/* <LoginLogo /> */}
       </Header>
 
       <Switch>
         <Route path="/">
-          <div>Registro</div>
-          <LoadingSpinner show />
+          <Category title="Desechables" bgColor="#57edf799" icon={DesechablesIcon} />
+          <Category title="Estuches" bgColor="#00d9cc99" icon={DesechablesIcon} />
+          <Category title="Desechables" bgColor="#57edf799" icon={DesechablesIcon} />
+
         </Route>
       </Switch>
     </BrowserRouter>
