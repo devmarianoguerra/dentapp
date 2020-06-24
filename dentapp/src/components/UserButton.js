@@ -14,7 +14,7 @@ font-size: 16px;
 
 function UserButton() {
   return (
-    <Icon>
+    <Icon onClick={props.onClick}>
       <FaUserAlt />
     </Icon>
   );

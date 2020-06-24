@@ -11,7 +11,7 @@ font-size: 20px;
 
 function ShoppingButton() {
   return (
-    <Icon>
+    <Icon onClick={props.onClick}>
       <MdShoppingCart />
     </Icon>
   );
