@@ -7,6 +7,7 @@ import "bootstrap/js/dist/index.js";
 import Header from "./components/Header";
 import LoginLogo from "./components/LoginLogo";
 import LoadingSpinner from "./components/LoadingSpinner";
+import IconButton from "./components/iconButton";
 
 function App(props) {
   const primaryColor = "#00D9CC";
@@ -19,6 +20,7 @@ function App(props) {
         routeToNavigate="/"
       >
         <LoginLogo />
+        <IconButton />
       </Header>
 
       <Switch>
