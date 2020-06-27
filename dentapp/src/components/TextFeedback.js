@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -10,15 +10,9 @@ const TextContainer = styled.div`
   ${(props) => props.error && "text-decoration: underline;"}
 `;
 
-class TextFeedback extends Component {
-  state = {
-    status: this.props.status,
-    text: this.props.text,
-    title: this.props.title,
-  };
-
-  render() {
-    const { status, text, title } = this.state;
+function TextFeedback (props){
+  
+    const { status, text, title } = this.props;
     const primaryColor = "#00D9CC"; //green color
     const secundaryColor = "#70757af0"; //grey color
     const errorColor = "#FF5555"; //red color
@@ -46,7 +40,7 @@ class TextFeedback extends Component {
       </>
     );
   }
-}
+
 
 TextFeedback.propTypes = {
   status: PropTypes.string,
