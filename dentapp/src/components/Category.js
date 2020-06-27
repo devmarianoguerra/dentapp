@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import styled from "styled-components";
 import PropTypes from "prop-types";
@@ -29,24 +29,19 @@ const HexaCircle = (bgColor) => {
         </svg>)
 }
 
-class Category extends Component {
-
-    state = {};
-
-    render() {
-        const { bgColor, title, icon, onClick } = this.props;
-        return (
-            <>
-                <div onClick={onClick()} className="text-center" style={{width: "102px", height:"130px"}}>
-                    {HexaCircle(bgColor)}
-                    <AlignCenter>
-                        <img className="" src={icon} alt="Title" />
-                        <Title className="mt-4">{title}</Title>
-                    </AlignCenter>
-                </div>
-            </>);
-    }
+function Category (props) {
+    const { bgColor, title, icon, onClick } = this.props;
+    return (<>
+            <div onClick={onClick} className="text-center" style={{ width: "102px", height: "130px" }}>
+                {HexaCircle(bgColor)}
+                <AlignCenter>
+                    <img className="" src={icon} alt="Title" />
+                    <Title className="mt-4">{title}</Title>
+                </AlignCenter>
+            </div>
+        </>);
 }
+
 
 Category.propTypes = {
     bgColor: PropTypes.string,
