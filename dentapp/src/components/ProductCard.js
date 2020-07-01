@@ -23,13 +23,19 @@ const ProductBox = styled.div`
       height: auto;
     }
 
+    h5 {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.4em;
+    }
     h6 {
       font-family: Roboto;
       font-style: normal;
       font-weight: bold;
-      font-size: 10px;
-      line-height: 11px;
-      text-align: center;
+      font-size: 1em;
+
+
     }
 
     .green{
@@ -38,6 +44,9 @@ const ProductBox = styled.div`
 
     .grey{
       color: #4A4A4A;
+    }
+    .light{
+      color: #CBCBCB;
     }
 `;
 
@@ -49,6 +58,7 @@ export default function ProductCard (props){
       price,
       img,
       onClick,
+      description
     } = props;
 
     return (
@@ -64,6 +74,9 @@ export default function ProductCard (props){
             <Row className="justify-content-center grey">
               <h5 className="px-4 text-wrap">{title}</h5>
             </Row>
+            <Row className="justify-content-center light">
+              <h6 className="px-4 text-wrap">{description}</h6>
+            </Row>
             <Row className="justify-content-center mb-2">
               <LinkContainer to={onClick}>
                 <Button variant="light"> Ver
@@ -76,9 +89,10 @@ export default function ProductCard (props){
     );
   }
 
-
 ProductCard.propTypes = {
-  backgroundColor: PropTypes.string,
-  iconAndTitleColor: PropTypes.string,
-  routeToNavigate: PropTypes.string,
+  title: PropTypes.string,
+  price: PropTypes.string,
+  img: PropTypes.object,
+  onClick: PropTypes.object,
+  description: PropTypes.string,
 };
