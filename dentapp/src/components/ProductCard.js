@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import styled from "styled-components";
 import PropTypes from "prop-types";
@@ -42,19 +42,18 @@ const ProductBox = styled.div`
 `;
 
 
-class ProductCard extends Component {
-  state = {};
-
-  render() {
+export default function ProductCard (props){
+  
     const {
       title,
       price,
       img,
       onClick,
-    } = this.props;
+    } = props;
+
     return (
       <div className="d-flex text-center font-weight-bold">
-        <Col xs={4} md={3} className="justify-content-center">
+        <Col xs={5} md={3} className="justify-content-center">
           <ProductBox >
             <Row className="justify-content-center">
               <Image className="img-fluid" src={img} />
@@ -76,12 +75,10 @@ class ProductCard extends Component {
       </div>
     );
   }
-}
+
 
 ProductCard.propTypes = {
   backgroundColor: PropTypes.string,
   iconAndTitleColor: PropTypes.string,
   routeToNavigate: PropTypes.string,
 };
-
-export default ProductCard;
