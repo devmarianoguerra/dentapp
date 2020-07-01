@@ -15,13 +15,11 @@ function App(props) {
         backgroundColor={primaryColor}
         iconAndTitleColor={secundaryColor}
         routeToNavigate="/"
-      >
-      </Header>
-
+      ></Header>
       <Switch>
-        <Route path="/">
-        </Route>
-      </Switch>
+        <Route path="/"></Route>{" "}
+      </Switch>{" "}
+
     </BrowserRouter>
   );
 }
