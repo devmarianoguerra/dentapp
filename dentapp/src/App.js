@@ -5,8 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/js/dist/index.js";
 
 import Header from "./components/Header";
-import LoginLogo from "./components/LoginLogo";
-import LoadingSpinner from "./components/LoadingSpinner";
+import Jeringa from "./assets/Jeringa.svg";
 import ProductCard from "./components/ProductCard";
 
 function App(props) {
@@ -19,12 +18,15 @@ function App(props) {
         iconAndTitleColor={secundaryColor}
         routeToNavigate="/"
       >
-        <LoginLogo />
+
       </Header>
 
       <Switch>
         <Route path="/">
-        <ProductCard/>
+          <ProductCard onClick="" title="Jeringa de
+Anestesia Dental" price="$599.00" img={Jeringa}></ProductCard>
+          <ProductCard onClick="" title="Jeringa de
+Anestesia Dental" price="$599.00" img={Jeringa}></ProductCard>
         </Route>
       </Switch>
     </BrowserRouter>
