@@ -1,39 +1,51 @@
 import React from "react";
-import { FaUserAlt } from "react-icons/fa";
-import { MdShoppingCart } from "react-icons/md";
 import Styled from "styled-components";
 import PropTypes from "prop-types";
 
-const darkgrey = "#4A4A4A";
-const cyan = " #00D9CC";
+const Icon = Styled.div`
+color: ${(props) => props.color};
+font-size: ${(props) => props.size};
 
-const Icon = Styled.button`
-border-radius: ${(props) => (props.borderRadius ? true : false)};
-color: ${(props) => (props.color ? cyan : darkgrey)};
-font-size: ${(props) => (props.fontSize ? "16px" : "20px")}
 `;
 
-function IconButton() {
-  const { fontSize, borderRadius, color, onClick } = this.props;
+const IconContainer = Styled.div`
+border-radius: ${(props) => props.rounded && "500px"};
+border: ${(props) => props.rounded && "solid 1px " + props.color};
+width: ${(props) => props.rounded && "200px"};
+height: ${(props) => props.rounded && "200px"};
+padding: ${(props) => props.centered && "11px 48px"}
+`;
+
+function IconButton(props) {
+  const { size, rounded, color, onClick, icon, centered } = props;
   return (
-    <Icon
-      onClick={onClick}
-      rounded={borderRadius}
-      color={color}
-      size={fontSize}
-      userIcon={<FaUserAlt />}
-      shoppingIcon={<MdShoppingCart />}
-    ></Icon>
+    <>
+      <Icon onClick={onClick} size={size} color={color}>
+        <IconContainer
+          rounded={rounded}
+          color={color}
+          size={size}
+          centered={centered}
+        >
+          {icon}
+        </IconContainer>
+      </Icon>
+    </>
   );
 }
 
 export default IconButton;
 
 IconButton.propTypes = {
-  borderRadius: PropTypes.bool.isRequired,
+  rounded: PropTypes.bool,
   color: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  fontSize: PropTypes.number.isRequired,
-  userIcon: PropTypes.string,
-  shoppingIcon: PropTypes.string,
+  size: PropTypes.string.isRequired,
+  icon: PropTypes.element.isRequired,
+  centered: PropTypes.bool,
+};
+
+IconButton.defaultProps = {
+  rounded: false,
+  centered: false,
 };
