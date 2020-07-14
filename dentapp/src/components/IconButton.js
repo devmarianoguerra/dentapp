@@ -13,7 +13,6 @@ border-radius: ${(props) => props.rounded && "500px"};
 border: ${(props) => props.rounded && "solid 1px " + props.color};
 width: ${(props) => props.rounded && "200px"};
 height: ${(props) => props.rounded && "200px"};
-padding: ${(props) => props.centered && "11px 48px"}
 `;
 
 function IconButton(props) {
@@ -42,7 +41,6 @@ IconButton.propTypes = {
   onClick: PropTypes.func.isRequired,
   size: PropTypes.string.isRequired,
   icon: PropTypes.element.isRequired,
-  centered: PropTypes.bool,
 };
 
 IconButton.defaultProps = {
